@@ -1,10 +1,9 @@
 default: &default
-  adapter: mysql2
-  encoding: utf8mb4
+  adapter: postgresql
+  encoding: utf8
   pool: <%= ENV["DB_POOL"] || 5  %>
   database: <%= ENV['DB_NAME'] || 'seshat-jets-2_development' %>
-  encoding: utf8mb4
-  username: <%= ENV['DB_USER'] || 'root' %>
+  username: <%= ENV['DB_USER'] || 'postgres' %>
   password: <%= ENV['DB_PASS'] %>
   host: <%= ENV["DB_HOST"] %>
   url: <%= ENV['DATABASE_URL'] %> # takes higher precedence than other settings
