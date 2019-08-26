@@ -1,1 +1,17 @@
 <h1>All Pages</h1>
+
+<table>
+  <thead>
+    <th>Name</th>
+    <th>URL</th>
+  </thead>
+  <% @pages.each do |page| %>
+    <tr>
+      <td><%= page.name %></td>
+      <td><%= page.url %></td>
+      <td><%= link_to "View Page", page_url(page) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to "new page", new_page_url%>
