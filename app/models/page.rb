@@ -11,6 +11,8 @@ class UrlValidator < ActiveModel::EachValidator
 end
 
 class Page < ApplicationRecord
+  has_many :actions
+
   include ActiveModel::Validations
 
   validates :name, presence: true

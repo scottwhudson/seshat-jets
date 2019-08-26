@@ -1,3 +1,19 @@
 <h1>Page</h1>
 <h2><%= @page.name %></h2>
 <h3><%= @page.url %></h3>
+
+<h4>Actions</h4>
+
+<table>
+  <thead>
+    <th>Action Name</th>
+  </thead>
+
+  <% @page.actions.each do |action| %>
+    <tr>
+      <td><%= action.name %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to "new action", new_page_action_path(@page) %>

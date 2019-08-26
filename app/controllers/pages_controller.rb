@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   end
 
   def show
-    @page = Page.find(params[:id])
+    @page = Page.find(params[:page_id])
   end
 
   def new
@@ -22,7 +22,7 @@ class PagesController < ApplicationController
   end
 
   def update
-    @page = Page.find(params[:id])
+    @page = Page.find(params[:page_id])
 
     if @page.update(pages_params)
       redirect_to pages_url
